@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    FILE *ptr;
+ptr=fopen("document.txt","r");
+if(ptr==NULL)
+{
+    printf("nothing in it");
+    return 1;
+    }
+
+
+}
+
