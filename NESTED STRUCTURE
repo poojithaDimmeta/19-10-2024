@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+struct marks {
+    int marks1;
+    int marks2;
+    int marks3;
+};
+
+struct details {
+    char name[20];
+    int regno;
+    struct marks m;
+} p[2];
+
+int main() {
+    for (int i = 0; i < 2; i++) {
+        printf("Enter the name: ");
+        scanf("%19s", p[i].name);
+
+        printf("Enter the registration number: ");
+        scanf("%d", &p[i].regno);
+
+        printf("Enter marks 1: ");
+        scanf("%d", &p[i].m.marks1);
+
+        printf("Enter marks 2: ");
+        scanf("%d", &p[i].m.marks2);
+
+        printf("Enter marks 3: ");
+        scanf("%d", &p[i].m.marks3);
+    }
+
+    for (int i = 0; i < 2; i++) {
+        printf("Name: %s\n", p[i].name);
+        printf("Registration Number: %d\n", p[i].regno);
+        printf("Marks 1: %d\n", p[i].m.marks1);
+        printf("Marks 2: %d\n", p[i].m.marks2);
+        printf("Marks 3: %d\n\n", p[i].m.marks3);
+    }
+    return 0;
+}
